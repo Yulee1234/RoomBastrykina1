@@ -1,0 +1,45 @@
+﻿<Window x:Class="RoomBastrykina1.Admin.AdminAddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomBastrykina1.Admin"
+        mc:Ignorable="d"
+        Title="AdminAddProduct" Height="620" Width="350">
+    <Grid Height="606" Margin="0,0,-0.4,0" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="15.2"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Введите название товара:"/>
+            <TextBox x:Name="txbNameProd" TextChanged="txbNameProd_TextChanged"/>
+            <TextBlock Text="Выберите категорию товара:"/>
+            <ComboBox x:Name="cmbCategoryChois" SelectedIndex="0" SelectionChanged="cmbCategoryChois_SelectionChanged"/>
+            <TextBlock Text="Введите цену:"/>
+            <TextBox x:Name="txbPriceChois" TextChanged="txbPriceChois_TextChanged"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Выберите изображение"/>
+        </StackPanel>
+        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="btnObzor" Content="Обзор" Style="{StaticResource ButtonOne}" Click="btnObzor_Click"/>
+        <StackPanel Grid.Row="3" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Введите описание:"/>
+            <TextBox x:Name="txbDescription" TextChanged="txbDescription_TextChanged"/>
+            <TextBlock Text="Введите материал товара:"/>
+            <TextBox x:Name="txbMaterial" TextChanged="txbMaterial_TextChanged"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btnExit" Content="Закрыть окно" Style="{StaticResource ButtonOne}" Click="btnExit_Click"/>
+            <Button x:Name="btnSave" Content="Сохранить" Style="{StaticResource ButtonOne}" Click="btnSave_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Vertical">
+            <TextBlock Text="Room Interior" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <Image Source="logo.png" Width="50"/>
+        </StackPanel>
+    </Grid>
+</Window>
